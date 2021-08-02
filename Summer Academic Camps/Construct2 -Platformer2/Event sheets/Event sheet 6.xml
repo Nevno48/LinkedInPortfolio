@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 6</name>
+    <events>
+        <variable constant="0" name="enemySpawned" sid="893115759637167" static="0" type="number">0</variable>
+        <variable constant="0" name="gotCube" sid="225390492002328" static="0" type="number">0</variable>
+        <event-group description="" sid="388541969125290" title="playercontrols">
+            <sub-events>
+                <event-block sid="967521182364364">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="518146974743136" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="569846222840528" type="player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="797027086873631">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="630775995134641" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="416731991290303" type="player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="773877873184042">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="179174860009106" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="745119638885890" type="player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="550826970505084" title="companionCube">
+            <sub-events>
+                <event-block sid="174207103700773">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="797236869607101" type="player">
+                            <param id="0" name="Object">companionCubes</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="922405356926802" type="System">
+                            <param id="0" name="First value">gotCube</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="785088247165912" type="System">
+                            <param id="0" name="Variable">gotCube</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="600326920647148">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="178183857142692" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="489643661378949" type="System">
+                            <param id="0" name="Variable">gotCube</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="560551466932291" type="System">
+                            <param id="0" name="Variable">gotCube</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="897638342396314">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="286935223460005" type="System">
+                            <param id="0" name="Variable">gotCube</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="292498533494527" type="companionCubes">
+                            <param id="0" name="X">player.X + 60</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="838655478927511" type="companionCubes">
+                            <param id="0" name="Y">player.Y - 80</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="167211819998027">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="877817652963222" type="System">
+                            <param id="0" name="Variable">gotCube</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="736941477492507" type="companionCubes">
+                            <param id="0" name="X">companionCubes.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="943234781607381" type="companionCubes">
+                            <param id="0" name="Y">companionCubes.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="754076327003117" type="System">
+                            <param id="0" name="Variable">gotCube</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="488108637762933" title="door">
+            <sub-events>
+                <event-block sid="558045080497940">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="659130907596949" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="630136499177236" type="Button">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="262918393185726">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="168817679247428" type="companionCubes">
+                            <param id="0" name="Object">Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="581893530770131" type="Button">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="645696328987693" type="closedDoor" />
+                        <action id="-15" name="Set visible" sid="340164793554194" type="openDoor">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="958902942793419" title="redoBar">
+            <sub-events>
+                <event-block sid="121787618070594">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="952746554865381" type="player">
+                            <param id="0" name="Object">spike</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="342027753698778" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="604785905381833" title="enemy">
+            <sub-events>
+                <event-block sid="104179864688969">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="700754733681849" type="player">
+                            <param id="0" name="Object">enemyButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="193947148036224" type="System">
+                            <param id="0" name="Object to create">enemy</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">acornShield.X + 100</param>
+                            <param id="3" name="Y">acornShield.Y  + 100</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="661611148668420" type="enemyButton" />
+                    </actions>
+                </event-block>
+                <event-block sid="378037866561667">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="992783975282397" type="System">
+                            <param id="0" name="Interval (seconds)">random(0.5,2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="715044650990941" type="enemy">
+                            <param id="0" name="Object">waterOrb</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="152930090153602">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="928322361142624" type="player">
+                            <param id="0" name="Object">enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="631554653878899" type="enemy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="721682700292863">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="423602151651468" type="player">
+                    <param id="0" name="Object">goal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="112601401749811" type="System">
+                    <param id="0" name="Layout">lvl4</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
