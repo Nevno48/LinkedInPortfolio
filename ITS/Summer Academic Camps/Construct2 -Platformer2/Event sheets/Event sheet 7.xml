@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 7</name>
+    <events>
+        <variable constant="0" name="canShoot" sid="221595395695322" static="0" type="number">0</variable>
+        <variable constant="0" name="swordGotten" sid="633313865792525" static="0" type="number">0</variable>
+        <event-group description="" sid="185728420053425" title="playercontrols2">
+            <sub-events>
+                <event-block sid="851853401443202">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="276058021358052" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="545665160685423" type="player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="678462817125034">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="407940098208090" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="299034316581718" type="player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="875224727968457">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="734285351135276" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="701962172886283" type="player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="106824411898366" title="waterOrb">
+            <sub-events>
+                <event-block sid="255305263669898">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="631279331568315" type="enemy" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="414296455582354" type="enemy">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="503671974326540">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="999362566688573" type="waterOrb">
+                            <param id="0" name="Object">enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="467015089984160" type="enemy" />
+                        <action id="-9" name="Destroy" sid="786465679730173" type="waterOrb" />
+                        <action id="-9" name="Destroy" sid="432872653830131" type="Particles" />
+                        <action id="-9" name="Set value" sid="433786938705946" type="System">
+                            <param id="0" name="Variable">canShoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="842503430852533">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="246191931061407" type="System">
+                            <param id="0" name="Interval (seconds)">0.25</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="921686877338781" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="503493236097692" type="System">
+                            <param id="0" name="Variable">canShoot</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="432947150276563" type="System">
+                            <param id="0" name="Object to create">waterOrb</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">player.X</param>
+                            <param id="3" name="Y">player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="365272945958306">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="445998065157029" type="waterOrb" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="318669201320968" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">waterOrb.X</param>
+                            <param id="3" name="Y">waterOrb.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="338274699084899">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="178888700163843" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="871814406104960" type="Particles">
+                            <param id="0" name="X">waterOrb.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="285102274106934" type="Particles">
+                            <param id="0" name="Y">waterOrb.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="615683774457512" title="pinnedObject">
+            <sub-events>
+                <event-block sid="752843737867531">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="589074342653292" type="player">
+                            <param id="0" name="Object">fuzzySword</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="308028341046672" type="fuzzySword">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="512715502787604" type="System">
+                            <param id="0" name="Variable">swordGotten</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="745971607938475">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="982615318383950" type="player">
+                            <param id="0" name="Object">myPet</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="692402754491899" type="myPet">
+                            <param id="0" name="Pin to">player</param>
+                            <param id="1" name="Mode">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="960244946123401">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="876491789279601" type="System" />
+                <condition id="-14" name="Compare variable" sid="300949545860066" type="System">
+                    <param id="0" name="Variable">swordGotten</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="533754686483781" type="fuzzySword">
+                    <param id="0" name="X">player.X + 40</param>
+                </action>
+                <action id="-2" name="Set Y" sid="769679137445873" type="fuzzySword">
+                    <param id="0" name="Y">player.Y + 40</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
