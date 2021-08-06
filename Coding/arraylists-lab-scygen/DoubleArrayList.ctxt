@@ -1,0 +1,55 @@
+#BlueJ class context
+comment0.target=DoubleArrayList
+comment0.text=\r\n\ @author\ Nick\ Giordano,\ Yuwei\ Chen\r\n\ \r\n
+comment1.params=
+comment1.target=DoubleArrayList()
+comment1.text=\r\n\ Initializes\ an\ empty\ list\ with\ a\ capacity\ of\ 10.\r\n
+comment10.params=num
+comment10.target=boolean\ contains(double)
+comment10.text=\r\n\ This\ goes\ through\ the\ array\ and\ searches\ for\ the\ number(num),\ if\ \r\n\ it\ is\ in\ the\ array,\ it\ returns\ true.\ Otherwise\ returns\ false.\r\n\ \r\n\ @param\ num\ \ This\ is\ the\ number\ being\ searched\ for\r\n\ \r\n\ @return\ \ true\ if\ num\ is\ in\ array\r\n
+comment11.params=
+comment11.target=DoubleArrayList\ getCopy()
+comment11.text=\r\n\ Returns\ a\ reference\ to\ a\ new\ DoubleArrayList\ object\ that\ is\ a\ copy\r\n\ of\ this\ DoubleArrayList.\ The\ copy\ contains\ the\ same\r\n\ ordered\ list\ of\ elements\ as\ the\ list\ and\ has\ the\ same\ capacity.\ \r\n\ Make\ sure\ the\ elements\ array\ of\ the\ copy\ is\ distinct\ from\ \r\n\ that\ of\ this\ list.\ In\ other\ words,\ this\ list\ and\ the\ copy\ \r\n\ must\ each\ have\ their\ own,\ separate\ elements\ arrays.\ \r\n\ @return\ a\ copy\ of\ the\ list\r\n
+comment12.params=
+comment12.target=int\ getCapacity()
+comment12.text=\r\n\ Returns\ the\ capacity\ of\ the\ list,\ which\ is\ the\ largest\ number\r\n\ of\ elements\ the\ array\ elements[]\ is\ capable\ of\ holding.\r\n\ In\ other\ words,\ it\ is\ the\ size\ of\ array\ elements[].\r\n\ @return\ the\ capacity\ of\ the\ list\r\n
+comment13.params=minCapacity
+comment13.target=void\ ensureCapacity(int)
+comment13.text=\r\n\ Ensures\ that\ the\ capacity\ of\ the\ list\ is\ at\ least\r\n\ the\ specified\ amount\ minCapacity.\ If\ the\ list\ \r\n\ capacity\ is\ already\ >\=\ minCapacity,\ then\ no\ \r\n\ action\ is\ taken.\r\n\ @param\ minCapacity\ the\ desired\ minimum\ capacity\r\n
+comment14.params=element
+comment14.target=void\ add(double)
+comment14.text=\ \r\n\ This\ is\ a\ smart\ add\ method\ (unlike\ the\ previous\r\n\ addSimple\ method\ that\ was\ provided\ for\ you.)\r\n\ This\ method\ adds\ the\ element\ to\ the\ end\ of\ the\ list.\r\n\ If\ the\ list\ is\ at\ its\ maximum\ capacity,\ its\r\n\ capacity\ is\ doubled\ to\ make\ room\ for\ the\ element.\r\n\ @param\ element\ the\ new\ element\ to\ be\ added\r\n\ \r\n\ You\ may\ call\ ensureCapacity\ in\ this\ method,\ but\ you\r\n\ may\ NOT\ CALL\ ANY\ OTHER\ METHODS\ HERE.\r\n
+comment15.params=pos\ element
+comment15.target=void\ add(int,\ double)
+comment15.text=\ \r\n\ Adds\ a\ new\ element\ at\ a\ specified\ position\ within\ the\ list.\r\n\ If\ the\ list\ is\ at\ its\ maximum\ capacity,\ its\r\n\ capacity\ is\ first\ doubled\ to\ make\ room\ for\ the\ new\ element.\r\n\ Entries\ originally\ at\ and\ above\ the\ specified\ position\r\n\ are\ moved\ to\ the\ next\ higher\ position\ within\ the\ list.\r\n\ The\ list\ size\ is\ increased\ by\ 1.\ Note\ that\ pos\ must\r\n\ be\ in\ the\ range\ [0...currentSize].\ It\ is\ ok\ if\ pos\ is\r\n\ equal\ to\ currentSize\ --\ in\ this\ case\ it\ merely\ adds\ \r\n\ the\ new\ element\ as\ the\ last\ item\ in\ the\ list.\r\n\ @param\ pos\ the\ desired\ position\ of\ the\ new\ element\r\n\ @param\ element\ the\ element\ to\ be\ added\ \r\n\ @throws\ IndexOutOfBoundsException\ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ pos\ <\ 0\ or\ pos\ >\ currentSize.\ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ You\ may\ call\ ensureCapacity\ in\ this\ method,\ but\ you\r\n\ may\ NOT\ CALL\ ANY\ OTHER\ METHODS\ HERE.\ \ \ \ \ *\r\n
+comment16.params=addend
+comment16.target=void\ addAll(DoubleArrayList)
+comment16.text=\ \r\n\ Adds\ all\ elements\ in\ addend\ to\ the\ end\ of\ this\ list,\ in\r\n\ the\ order\ in\ which\ they\ occur\ in\ addend.\r\n\ If\ this\ list's\ capacity\ is\ insufficient\ to\ hold\ all\ the\ new\r\n\ elements,\ its\ capacity\ is\ first\ increased\ to\ \r\n\ this.size()\ +\ addend.size().\ \r\n\ @param\ addend\ list\ containing\ elements\ to\ add\r\n\ \r\n\ You\ may\ call\ ensureCapacity\ in\ this\ method,\ but\ you\r\n\ may\ NOT\ CALL\ ANY\ OTHER\ METHODS\ HERE.\r\n
+comment17.params=pos\ addpos
+comment17.target=void\ addAll(int,\ DoubleArrayList)
+comment17.text=\ \r\n\ Adds\ all\ elements\ in\ addpos\ into\ this\ list\ at\ the\ specified\r\n\ position,\ in\ the\ order\ in\ which\ they\ occur\ in\ addend.\r\n\ If\ this\ list's\ capacity\ is\ insufficient\ to\ hold\ all\ the\ new\r\n\ elements,\ its\ capacity\ is\ first\ increased\ to\ \r\n\ this.size()\ +\ addpos.size().\ \r\n\ \r\n\ For\ example,\ if\ list\ A\ contains\ {0,\ 10,\ 20,\ 30}\ and\r\n\ list\ B\ contains\ {5,\ 15,\ 25}\ and\ A.addAll(2,\ B)\r\n\ is\ called,\ then\ after\ the\ call\ A\ would\ contain\r\n\ {0,\ 10,\ 5,\ 15,\ 25,\ 20,\ 30}.\r\n\ @param\ addpos\ list\ containing\ elements\ to\ add\r\n\ \r\n\ You\ may\ call\ ensureCapacity\ in\ this\ method,\ but\ you\r\n\ may\ NOT\ CALL\ ANY\ OTHER\ METHODS\ HERE.\r\n
+comment2.params=initialCapacity
+comment2.target=DoubleArrayList(int)
+comment2.text=\r\n\ Initializes\ an\ empty\ list\ with\ the\ specified\ initial\r\n\ capacity.\ initialCapacity\ must\ be\ >\ 0.\ If\ initialCapacity\r\n\ is\ <\=\ 0,\ then\ it\ initializes\ an\ empty\ list\ with\r\n\ capacity\ 10.\r\n\ @param\ initialCapacity\ initial\ capacity\ of\ list\r\n
+comment3.params=pos
+comment3.target=void\ checkBounds(int)
+comment3.text=\ \r\n\ Valid\ positions\ for\ elements\ in\ the\ list\ range\r\n\ from\ 0\ to\ currentSize-1.\ This\ method\ checks\r\n\ that\ pos\ is\ valid.\ If\ pos\ is\ not\ in\ this\r\n\ range,\ then\ it\ throws\ the\ IndexOutOfBounds\ \r\n\ exception.\ Otherwise,\ it\ does\ nothing.\r\n\ @param\ pos\ a\ position\ in\ the\ list\r\n\ @throws\ IndexOutOfBoundsException\ \r\n\ \ \ \ \ \ \ \ \ if\ pos\ <\ 0\ or\ pos\ >\=\ currentSize\r\n
+comment4.params=pos
+comment4.target=double\ get(int)
+comment4.text=\ \r\n\ Returns\ the\ element\ at\ position\ pos\ in\ the\ list.\r\n\ pos\ must\ be\ in\ the\ range\ [0...currentSize-1].\ \r\n\ If\ it\ is\ not,\ then\ the\ IndexOutOfBounds\ exception\r\n\ is\ thrown.\r\n\ @param\ pos\ the\ position\ of\ the\ desired\ element\r\n\ @return\ the\ indicated\ element.\r\n\ @throws\ IndexOutOfBoundsException\ if\ pos\ <\ 0\ or\ pos\ >\=\ currentSize.\ \r\n
+comment5.params=element
+comment5.target=boolean\ addSimple(double)
+comment5.text=\ \r\n\ A\ simplistic\ add\ method\ that\ adds\ the\ \r\n\ element\ to\ the\ end\ of\ the\ list,\ if\ there\ is\ room\ for\ it.\r\n\ However,\ if\ the\ list\ is\ at\ its\ maximum\ capacity,\ then\ this\r\n\ method\ does\ not\ add\ the\ element.\ It\ just\ returns\ false.\r\n\ @param\ element\ the\ element\ to\ be\ added\r\n\ @return\ true\ if\ the\ element\ is\ sucessfully\ added,\ false\ otherwise\r\n
+comment6.params=
+comment6.target=int\ size()
+comment6.text=\r\n\ Returns\ the\ number\ of\ elements\ in\ the\ list\r\n\ @return\ the\ number\ of\ list\ elements\r\n
+comment7.params=pos\ element
+comment7.target=void\ set(int,\ double)
+comment7.text=\r\n\ Sets\ the\ element\ at\ position\ pos\ to\ element.\ \r\n\ @param\ pos\ the\ position\ of\ the\ element\ to\ be\ replaced\r\n\ @param\ element\ the\ element\ that\ will\ replace\ the\ \r\n\ \ \ \ one\ at\ the\ indicated\ position\ \ \ \ \ \ \ \ \r\n\ @throws\ IndexOutOfBoundsException\ if\ pos\ <\ 0\ or\ pos\ >\=\ currentSize.\ \r\n
+comment8.params=pos
+comment8.target=double\ remove(int)
+comment8.text=\ \r\n\ Removes\ the\ element\ at\ position\ pos\ from\ the\ list\r\n\ and\ returns\ it.\ Entries\ originally\ at\ positions\ \r\n\ higher\ than\ the\ given\ position\ are\ at\ the\ next\ \r\n\ lower\ position\ within\ the\ list,\ and\ the\ list\ size\ \r\n\ is\ decreased\ by\ 1.\r\n\ @param\ pos\ position\ of\ the\ element\ to\ be\ removed\r\n\ @return\ the\ removed\ element\r\n\ @throws\ IndexOutOfBoundsException\ \r\n\ \ \ \ \ \ \ \ \ if\ pos\ <\ 0\ or\ pos\ >\=\ currentSize\r\n
+comment9.params=
+comment9.target=void\ clear()
+comment9.text=\ \r\n\ Clears\ all\ elements\ from\ the\ list,\ resulting\ in\ a\ empty\ list.\r\n\ You\ may\ NOT\ call\ any\ other\ method\ in\ your\ implementation\r\n\ of\ this\!\r\n
+numComments=18

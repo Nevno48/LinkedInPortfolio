@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=myStringFunctions
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ myStringFunctions\ here.\r\n\r\n\ @author\ (Briella\ Sala\ &\ Nick\ Giordano)\r\n\ @version\ (Spring\ 2019)\r\n
+comment1.params=str
+comment1.target=int\ strLength(java.lang.String)
+comment2.params=str
+comment2.target=java.lang.String\ reverse(java.lang.String)
+comment3.params=str
+comment3.target=java.lang.String\ compact(java.lang.String)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
